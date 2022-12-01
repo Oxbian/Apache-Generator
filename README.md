@@ -1,5 +1,10 @@
 # Apache Generator
 -------------
+![Release](https://img.shields.io/badge/Release-v1.0-brightgreen?style=for-the-badge)
+![Language](https://img.shields.io/badge/Language-Bash-green?style=for-the-badge)
+![Size](https://img.shields.io/github/repo-size/Oxbian/Apache-Generator?label=SIZE&style=for-the-badge)
+![Licence](https://img.shields.io/github/license/Oxbian/Apache-Generator?style=for-the-badge)
+![OpenSource](https://img.shields.io/badge/OpenSource-blue?style=for-the-badge&logo=opencollective&logoColor=white)
 
 Apache Generator is a tool to generate apache configuration file. It allows you to generate simple files with proxy, directory protection and custom path / name / Directory index.
 
