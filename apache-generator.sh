@@ -152,16 +152,35 @@ while test $# -gt 0; do
 done
 
 #Checking logic fail in the user command 
-# TODO: dir & no dir request
-# dir request & no dir
-# proxy name and no proxy path
-# proxy path and no proxy name
-# server name and no docu root
-# docu root and no server name
-# ssh user and no host
-# ssh host and no user
+if (( (${#user} > 0 && ${#host} <= 0) || (${#host} > 0 && ${#user} <= 0) ))
+then
+    echo "SSH host or user not set, please run the program with both -h and -u flags\n"
+    exit 1
+fi
 
-#if (( ${#}))
+if (( (${#name} > 0 && ${#path} <= 0) || (${#path} > 0 && ${#name} <= 0) ))
+then
+    echo "Server name or Document Root not set, please run the program with both -n and --path flags\n"
+    exit 1
+fi
+
+if (( (${#proxy} > 0 && ${#proxyPath} <= 0) || (${#proxyPath} > 0 && ${#proxy} <= 0) ))
+then
+    echo "Proxy url or proxy path not set, please run the program with both -P and -N flags\n"
+    exit 1
+fi
+
+if (( (${#dir} > 0 && ${#dirIp} <= 0) || (${#dirIp} > 0 && ${#dir} <= 0) ))
+then
+    echo "Directory path or directory ip not set, please run the program with both -d and --allow-ip flags\n"
+    exit 1
+fi
+
+if (( (${#dir} > 0 && ${#dirDefault} <= 0) || (${#dirDefault} > 0 && ${#dir} <= 0) ))
+then
+    echo "Directory path or directory index not set, please run the program with both -d and --dir-default flags\n"
+    exit 1
+fi
 
 # Testing if the user want to use ssh
 if [ ${#user} -gt 0 ] && [ ${#host} -gt 0 ];
