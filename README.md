@@ -5,9 +5,9 @@
 ![Licence](https://img.shields.io/github/license/Oxbian/Apache-Generator?style=for-the-badge)
 ![OpenSource](https://img.shields.io/badge/OpenSource-blue?style=for-the-badge&logo=opencollective&logoColor=white)
 
-Apache Generator is a tool to generate apache configuration file. It allows you to generate simple files with proxy, directory protection and custom path / name / Directory index.
+Apache Generator is a tool to generate the apache configuration file. It allows you to generate simple files with proxy, directory protection and custom path / name / Directory index.
 
-## How to use ?
+## How to use it ?
 
 > git clone 
 
@@ -26,7 +26,7 @@ Apache Generator is a tool to generate apache configuration file. It allows you 
 |   -n / --name     | Specify server name                         |
 |   --path          | Specify DocumentRoot path                   |
 |  -d /--dir        | Specify Directory to protect                |
-| --allow-ip        | Specify an ip allowed to access to this dir |
+| --allow-ip        | Specify an IP allowed to access to this dir |
 | --dir-default     | Specify the directoryIndex                  |
 | -P / --proxy      | Specify the proxy url                       |
 | -N / --proxy-path | Specify the proxy path                      |
